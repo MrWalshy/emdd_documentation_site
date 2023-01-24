@@ -1,14 +1,16 @@
-@docArgs(){{ 
-    "title": ".emdd | Home", 
-    "links": ["./style.css"]
-}};
+@docArgs()
+```
+"title": ".emdd | Home", 
+"links": ["./style.css"]
+```
 
-@weave(name="page_header"){ 
-    "title": "Extensible Markdown (.emdd)", 
-    "lead": "A format for writing web documents, somewhere in-between Markdown and your typical HTML, CSS and JS." 
-};
+@weave(name="page_header")
+```
+"title": "Extensible Markdown (.emdd)", 
+"lead": "A format for writing web documents, somewhere in-between Markdown and your typical HTML, CSS and JS." 
+```
 
-Extensible Markdown (.emdd) is a file format for writing web documents, which can then be transpiled with the use of plugins to your desired output, or lack of. This allows Markdown to remain relatively as normal while also promoting extensibility. By default, .emdd files will have their Markdown content parsed and output as HTML.
+Extensible Markdown Documents (emdd) is an extension to Markdown for writing web documents, which can then be transpiled with the use of plugins to your desired output, or lack of. This allows Markdown to remain relatively as normal while also promoting extensibility. By default, `md` files will have their Markdown content parsed and output as HTML. Blocks annotated with an `@` specifier will be processed via pre-processing and content processing plugins where supported.
 
 > The API for Extensible Markdown will be classed as unstable until a version 1 release is reached
 
@@ -22,12 +24,14 @@ If you would like to contribute to Extensible Markdown, please visit the GitHub 
 
 ## Example document
 
-The following is an example of a .emdd document:
+The following is an example of an emdd document:
 
-@lit(){
-<pre><code>@\docArgs(){{
-    "title": "Example page"
-}}\;
+@lit()
+```
+<pre><code>@docArgs()
+\```
+"title": "Example page"
+\```
 
 # Title
 
@@ -35,12 +39,13 @@ Some paragraph text. Some paragraph text. Some paragraph text. Some paragraph te
 Some paragraph text. Some paragraph text. Some paragraph text. Some paragraph text. Some paragraph text. Some paragraph text. 
 Some paragraph text. Some paragraph text. Some paragraph text.
 
-@js(){
-    let sum = 3 + 3;
-    return `&lt;p>Sum of 3 + 3 is ${sum}&lt;/p>`;
-}\;
+@js()
+\```
+let sum = 3 + 3;
+return `<p>Sum of 3 + 3 is ${sum}</p>`;
+\```
 </pre></code>
-};
+```
 
 After transpilation to HTML, the contents of the document would roughly look as follows:
 

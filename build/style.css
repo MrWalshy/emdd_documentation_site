@@ -26,7 +26,7 @@ body {
 h1 { font-size: 3.2rem; }
 h2 { font-size: 2.4rem; }
 h3 { font-size: 2rem; }
-p, a, li, label, button, th, td, input, legend, code { font-size: 1.6rem; line-height: 1.5; letter-spacing: 1px; }
+p, a, li, label, button, th, td, input, legend, code, small { font-size: 1.6rem; line-height: 1.5; letter-spacing: 1px; }
 label { font-weight: 600; }
 legend { font-weight: 700; }
 code { font-family: 'Courier New', Courier, monospace; }
